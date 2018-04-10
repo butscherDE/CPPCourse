@@ -1,0 +1,6 @@
+﻿  CPPCourse_01_2.cpp
+c:\users\administrator\source\repos\cppcourse_01_2\cppcourse_01_2\cppcourse_01_2.cpp(27): warning C4244: "Argument": Konvertierung von "__int64" in "int", möglicher Datenverlust
+c:\users\administrator\source\repos\cppcourse_01_2\cppcourse_01_2\cppcourse_01_2.cpp(28): warning C4244: "Argument": Konvertierung von "__int64" in "int", möglicher Datenverlust
+c:\users\administrator\source\repos\cppcourse_01_2\cppcourse_01_2\cppcourse_01_2.cpp(40): warning C4244: "return": Konvertierung von "__int64" in "int", möglicher Datenverlust
+c:\users\administrator\source\repos\cppcourse_01_2\cppcourse_01_2\cppcourse_01_2.cpp(43): warning C4715: "tidyNumber": Nicht alle Codepfade geben einen Wert zurück.
+  CPPCourse_01_2.vcxproj -> C:\Users\Administrator\source\repos\CPPCourse_01_2\Debug\CPPCourse_01_2.exe
