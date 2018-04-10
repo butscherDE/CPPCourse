@@ -7,8 +7,9 @@ TreeNode::TreeNode(TreeNode* parent, int key)
 {
 	m_parent = parent;
 	m_key = key;
-	addChild(-1);
-	addChild(-1);
+	m_children = std::make_unique<std::vector<std::unique_ptr<TreeNode>>>(2);
+	//addChild(-1);
+	//addChild(-1);
 }
 
 
@@ -18,8 +19,8 @@ TreeNode::~TreeNode()
 
 TreeNode* TreeNode::addChild(int key)
 {
-	m_children.push_back(std::make_unique<TreeNode>(this, key));
-	return m_children.back().get();
+	m_children->push_back(std::make_unique<TreeNode>(this, key));
+	return m_children->back().get();
 }
 
 TreeNode * TreeNode::addChild(int key, int pos)
@@ -28,14 +29,14 @@ TreeNode * TreeNode::addChild(int key, int pos)
 		std::cerr << "Tried to add to a out-of-bounds position at a binary tree" << std::endl;
 	}
 	//FIXME: Überschreiben gute Idee bezüglich memory management?
-	m_children[pos] = std::make_unique<TreeNode>(this, key);
-	return m_children.back().get();
+	(*m_children.get())[pos] = std::make_unique<TreeNode>(this, key);
+	return m_children->back().get();
 }
 
 std::vector<TreeNode*> TreeNode::getChildren()
 {
 	std::vector<TreeNode*> children;
-	for (auto curr = m_children.begin(); curr != m_children.end(); curr++) {
+	for (auto curr = m_children->begin(); curr != m_children->end(); curr++) {
 		children.push_back(curr->get());
 	}
 
