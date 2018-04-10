@@ -16,18 +16,24 @@ void BinaryTree::printChildrens() {
 }
 
 void BinaryTree::printChildrens(TreeNode* node, const int height) {
-	std::string indention;
+	TreeNode* c1 = node->getChildren()[0];
+	if (c1 != nullptr) {
+		printChildrens(c1, height + 1);
+	}
+
 	for (int i = 0; i < height - 1; i++) {
-		std::cout << "|  ";
+		std::cout << "    ";
 	}
 	if (height) {
 		std::cout << "+---";
 	}
-
-
-	TreeNode* c = node->getChildren()[0];
 	std::cout << node->getKey() << std::endl;
-	TreeNode* c = node->getChildren()[1];
+
+
+	TreeNode* c2 = node->getChildren()[1];
+	if (c2 != nullptr) {
+		printChildrens(c2, height + 1);
+	}
 
 	/*for (TreeNode* c : node->getChildren()) {
 		if (c != nullptr) {

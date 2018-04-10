@@ -37,3 +37,6 @@
 *.db-shm
 *.db-wal
 *.db
+*.tlog
+*.tlog
+CPPCourse_01/CPPCourse_03/Debug/CPPCourse_03.tlog/link.command.1.tlog
