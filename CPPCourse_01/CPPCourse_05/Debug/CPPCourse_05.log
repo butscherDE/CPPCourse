@@ -1,0 +1,9 @@
+﻿  CPPCourse_05.cpp
+c:\users\daniel\documents\cppcourse\cppcourse_01\cppcourse_05\cppcourse_05.cpp(28): error C2672: "sort": keine übereinstimmende überladene Funktion gefunden
+  c:\users\daniel\documents\cppcourse\cppcourse_01\cppcourse_05\cppcourse_05.cpp(43): note: Siehe Verweis auf die Instanziierung der gerade kompilierten Funktions-Vorlage "std::vector<Point<int>,std::allocator<_Ty>> sort_by_distance<int>(std::vector<_Ty,std::allocator<_Ty>>,Point<int>)".
+          with
+          [
+              _Ty=Point<int>
+          ]
+c:\users\daniel\documents\cppcourse\cppcourse_01\cppcourse_05\cppcourse_05.cpp(28): error C2783: "void std::sort(const _RanIt,const _RanIt,_Pr)": Vorlage-Argument für "_Pr" konnte nicht hergeleitet werden.
+  c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.13.26128\include\algorithm(3513): note: Siehe Deklaration von "std::sort"
